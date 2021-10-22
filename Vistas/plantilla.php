@@ -18,7 +18,19 @@
     <div class="container">
             <div class="jumbotron">
             
-                
+                <?php
+                    if(isset($_GET["menu"])){
+                        $menu = $_GET["menu"];
+                        switch($menu){
+                            case 'agregarProveedor':
+                                include 'Vistas/modulos/agregarProveedor.php';
+                                break;
+                            case 'agregarSucursal':
+                                echo '<h1>Agregar sucursal </h1>';
+                                break;
+                        }
+                    } 
+                ?>
             </div>
         </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
